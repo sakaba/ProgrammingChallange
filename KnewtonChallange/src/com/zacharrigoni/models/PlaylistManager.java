@@ -46,7 +46,7 @@ public class PlaylistManager {
     }
 
     private void incrementArtistPair(Artist artistOne, Artist artistTwo) {
-        String pairKey = "";
+        String pairKey;
         if (artistOne.getId() < artistTwo.getId())
         {
             pairKey = + artistOne.getId() + "|" + artistTwo.getId();

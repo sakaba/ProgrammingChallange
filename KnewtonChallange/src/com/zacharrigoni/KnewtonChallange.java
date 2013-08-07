@@ -7,7 +7,8 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
- *
+ *  
+ * 
  * @author zach4939
  */
 public class KnewtonChallange {
@@ -19,13 +20,19 @@ public class KnewtonChallange {
      */
     public static void main(String[] args) {
         String fileLocation = "Artist_lists_small.txt";
+        
+        if (args.length > 0)
+        {
+            fileLocation = args[0];
+        }
+        
         PlaylistManager manager = new PlaylistManager();
         
         try {
             FileReader fileReader = new FileReader(fileLocation);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             
-            String content = "";
+            String content;
             while ((content = bufferedReader.readLine()) != null)
             {
                 Playlist playlist = new Playlist(content);
