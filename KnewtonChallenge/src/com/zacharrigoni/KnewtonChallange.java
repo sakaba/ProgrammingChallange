@@ -7,9 +7,16 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
- *  
+ * Runtime: Looping through the lines in the file is N.
+ * Inserting the objects of one line into the playlistManager: N(N-1) 
+ * Finding all the pairs with 50 or more matches = N
+ * N(N(N-1)) + N = N(N^2 - N + N) = N^3 - N^2 + N^2 = O(N^3)
  * 
- * @author zach4939
+ * Space complexity: We store all possible pairs in a hash, which is essentially 
+ * N^2 (Artists * Artists or N*N). We also have a hash of all the artists (N) for faster look up, N. The 
+ * space complexity breaks down to N^2 + N which is O(N^2)
+ * 
+ * @author Zach Arrigoni
  */
 public class KnewtonChallange {
 
@@ -19,11 +26,16 @@ public class KnewtonChallange {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String fileLocation = "Artist_lists_small.txt";
+        String fileLocation;
         
         if (args.length > 0)
         {
             fileLocation = args[0];
+        } 
+        else 
+        {
+            System.out.println("Missing file location parameter");
+            return;
         }
         
         PlaylistManager manager = new PlaylistManager();

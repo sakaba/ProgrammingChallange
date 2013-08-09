@@ -1,0 +1,7 @@
+In your command line navigate to where this was extracted
+
+KnewtonChallenge> ant jar
+
+To Execute: 
+
+java -jar KnewtonChallenge\dist\KnewtonChallenge.jar [input file location]

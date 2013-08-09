@@ -6,3 +6,5 @@
 *.ear
 /KnewtonChallange/nbproject/private/
 /KnewtonChallange/build/
+/KnewtonChallange/dist/
+/KnewtonChallenge/nbproject/private/
